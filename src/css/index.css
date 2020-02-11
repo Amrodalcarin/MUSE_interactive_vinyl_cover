@@ -1,0 +1,59 @@
+:root {
+    --bgcolor_cover: #743286;
+}
+
+.cover_box {
+    width: 400px;
+    height: 400px;
+    background: url("../assets/cover.jpg") var(--bgcolor_cover);
+    background-size: cover;
+}
+
+.vinyl {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 390px;
+    height: 390px;
+    background: repeating-radial-gradient(#1d1d1d00, #1d1d1d00 4px, #3a3a39 5px, #1d1d1d00 6px), linear-gradient(to right, #111 40%, #464646 50%, #111 60%);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 1s;
+    animation: rotation 4s infinite linear;
+}
+
+.cover_box:active + .vinyl {
+    left: 250px;
+}
+
+.label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: url("../assets/label.jpg") #1b1b1b;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.hole {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
