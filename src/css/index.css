@@ -2,7 +2,13 @@
     --bgcolor_cover: #743286;
 }
 
+body {
+    background: url("../assets/background_80s.jpg") var(--bgcolor_cover);
+    background-size: cover;
+}
+
 .cover_box {
+    margin: auto;
     width: 400px;
     height: 400px;
     background: url("../assets/cover.jpg") var(--bgcolor_cover);
@@ -12,7 +18,7 @@
 .vinyl {
     position: absolute;
     top: 12px;
-    left: 12px;
+    left: 37%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,7 +33,7 @@
 }
 
 .cover_box:active + .vinyl {
-    left: 250px;
+    left: 55%;
 }
 
 .label {
