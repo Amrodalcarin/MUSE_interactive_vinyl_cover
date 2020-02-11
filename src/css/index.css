@@ -4,7 +4,12 @@
 
 body {
     background: url("../assets/background_80s.jpg") var(--bgcolor_cover);
+    height: 100vh;
+    background-position-x: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 }
 
 .cover_box {
@@ -13,12 +18,15 @@ body {
     height: 400px;
     background: url("../assets/cover.jpg") var(--bgcolor_cover);
     background-size: cover;
+    box-shadow: #1b1b1b 0 0 10px inset;
 }
 
 .vinyl {
     position: absolute;
-    top: 12px;
-    left: 37%;
+    top: 50%;
+    left: 50%;
+    margin-left: -195px;
+    margin-top: -185px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -33,7 +41,7 @@ body {
 }
 
 .cover_box:active + .vinyl {
-    left: 55%;
+    left: 65%;
 }
 
 .label {
